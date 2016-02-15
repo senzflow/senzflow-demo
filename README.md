@@ -197,7 +197,7 @@ Node.js使用的是树莓派WiringPi GPIO驱动，参考[链接](https://github.
 **MQTT协议规划设计：**
 
 - ***clientId***：按照MQTT的设计语义，client ID即设备ID，用于标识设备。设备ID应该具有唯一性，比如Mac地址或SN，或者某种硬件序号。senzflow.io平台会提供基于client ID的设备管理服务，用户可以在senzflow.io设备管理页面中查看自己设备及其ID。
-- ***topic***：senzflow.io提供基于topic的物联网消息发布-订阅服务，用户可以根据自己的设备和数据特点设置topic的组织方式。一般情况下，topic的定义可以包含了数据的类别和来源信息。例如，多地区多类别传感数据收集场景下，topic的定义可以是 <region>/<category>/<sensor-id>。
+- ***topic***：senzflow.io提供基于topic的物联网消息发布-订阅服务，用户可以根据自己的设备和数据特点设置topic的组织方式。一般情况下，topic的定义可以包含了数据的类别和来源信息。例如，多地区多类别传感数据收集场景下，topic的定义可以是 `<region>/<category>/<sensor-id>`。
 
 **代码示例：**
 
