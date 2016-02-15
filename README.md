@@ -135,7 +135,7 @@ WiringPi是应用于树莓派平台的GPIO控制库函数，WiringPi对树莓派
 ###案例代码说明
 ####1. WiringPi
 Node.js使用的是树莓派WiringPi GPIO驱动，参考[链接](https://github.com/eugeneware/wiring-pi
-)，由于WiringPi GPIO驱动需要root权限，运行时，需使用sudo命令。
+)，由于WiringPi GPIO驱动需要root权限，运行时，需使用`sudo`命令。
 
 ####2. 传感器Node.js驱动
 #####DHT11
