@@ -1,7 +1,7 @@
 # Getting Started
 ----------
 
-**senzflow.io是一个提供IoT SaaS服务的云平台。通过senzflow SDK，开发者和用户能快速地接入传感器和设备，进行数据收据、管理及分析，形成洞见及行动。开发者和用户也能通过API，定制开发应用。**  
+**senzflow.io是一个提供IoT SaaS服务的云平台。通过senzflow SDK，开发者和用户能快速地接入传感器和设备，进行数据收据、管理及分析；开发者和用户也能通过API，定制开发应用。**  
 >本案例通过树莓派（Raspberry Pi）连接环境传感器，通过封装MQTT协议的senzFlow SDK接入senzflow.io，轻松DIY实现温湿度及PM2.5浓度的实时采集、分析。    
 MQTT协议具有发布（Publish）和订阅（Subscribe）两个原语，支持不同的服务质量（QoS）和持久（Persistence）会话，同时具有设计轻巧、实现简单的特点，在低功耗、低带宽、以及链路可靠性低的环境下也能运行良好。MQTT协议也是物联网数据平台推荐的首选协议。
 
@@ -38,7 +38,7 @@ senzflow.io视数据安全为客户核心价值，设备接入必须通过安全
 
 ![](http://7i7ggf.com1.z0.glb.clouddn.com/4.png)
 
-### 3. 增加设备型号
+### 3. 创建设备型号
 
 设备分为网关（Gateway）和节点（Node），开发者根据实际情况进行添加。本例中树莓派是网关，传感器作为节点。
 
@@ -50,7 +50,7 @@ senzflow.io视数据安全为客户核心价值，设备接入必须通过安全
 
 ![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-05.jpg)
 
-### 4. 增加数据流
+### 4. 创建数据流
 
 设备将采集的数据（或者称为一个event）被发布到一个数据流，数据流名称代表了数据类型。
 
