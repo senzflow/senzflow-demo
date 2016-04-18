@@ -309,7 +309,7 @@ myDevice.nodeOffline("Dht11AndPpdn42ns001")
 	
 配合已经下载的证书文件（/home/pi/stephen-ca目录），即可运行，
 
-    sudo npm index.js
+    sudo node index.js
 
 登录senzflow.io，在“运营中心”--“设备”中，即可查看到网关和节点的运行数据。
 
