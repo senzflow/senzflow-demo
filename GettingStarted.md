@@ -15,7 +15,7 @@ MQTT协议具有发布（Publish）和订阅（Subscribe）两个原语，支持
 
 点击注册，输入email地址等信息后提交，会收到系统激活邮件，根据内容操作激活，即可开始使用senzflow.io提供的服务了。
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-01.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-01-01.jpg)
 
 ### 2. 创建并下载证书
 
