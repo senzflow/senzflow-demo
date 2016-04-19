@@ -22,21 +22,19 @@ MQTT协议具有发布（Publish）和订阅（Subscribe）两个原语，支持
 senzflow.io视数据安全为客户核心价值，设备接入必须通过安全证书的方式。
 登陆senzflow.io，进入“开发者中心”，在“设备”--“接入证书”里创建证书，
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-02.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-02-01.png)
 
 然后下载，
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-03.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-03-01.png)
 
 压缩包中的证书分为三个文件，
 
- - 服务器ca证书
- - 用户ca证书
- - 用户密钥
+ - 服务器ca证书 （ca.pem）
+ - 用户ca证书 （cert.pem）
+ - 用户密钥 （key.pem）
 
-证书文件放置在树莓派/home/pi/stephen-ca目录，如下
-
-![](http://7i7ggf.com1.z0.glb.clouddn.com/4.png)
+证书文件放置在树莓派当前工程./ca目录，开发者可使用相对路径。
 
 ### 3. 创建设备型号
 
@@ -44,11 +42,11 @@ senzflow.io视数据安全为客户核心价值，设备接入必须通过安全
 
 进入“开发者中心”，在“设备”--“设备型号”里创建网关型号如下，
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-04.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-04-01.png)
 
 创建节点型号如下，
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-05.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-05-01.png)
 
 ### 4. 创建数据流
 
@@ -67,7 +65,7 @@ var temp_humi_pm25 = {
 
 用户在“开发者中心”--“数据流”中定义数据流的格式，由若干个数据点构成，如下
 
-![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-06.jpg)
+![](http://7i7ggf.com1.z0.glb.clouddn.com/beta-06-01.png)
 
 ## 二、硬件准备
 
@@ -227,9 +225,9 @@ Node.js使用的是树莓派WiringPi GPIO驱动，参考[链接](https://github.
 ```
 var options = {
     clientId: “RaspberryPI001”,
-    caPath: “/home/pi/stephen-ca/beta2/ca.pem”,
-    keyPath: “/home/pi/stephen-ca/beta2/key.pem”,
-    certPath: “/home/pi/stephen-ca/beta2/cert.pem”,
+    caPath: “./ca/ca.pem”,
+    keyPath: “./ca/key.pem”,
+    certPath: “./ca/cert.pem”,
     meta: {
         model: “RaspberryPI”,
         name: "My RaspberryPI001",
@@ -307,7 +305,7 @@ myDevice.nodeOffline("Dht11AndPpdn42ns001")
 ## 四、运行
 
 	
-配合已经下载的证书文件（/home/pi/stephen-ca目录），即可运行，
+配合已经下载的证书文件（./ca目录），即可运行，
 
     sudo node index.js
 
