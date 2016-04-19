@@ -278,12 +278,9 @@ myDevice.nodeOffline("Dht11AndPpdn42ns001")
 ```
     function send_message(temp, humi, pm25){
         var msg_format = {
-            timestamp:getISOString(),
             temperature:temp,
             humidity:humi,
             pm25:pm25,
-            location: {lat: 22.528565, lng: 113.944126},
-            addr: "华中科技大学深圳产学研基地",
         };
         myDevice.publish({
         		node: "Dht11AndPpdn42ns001", 
